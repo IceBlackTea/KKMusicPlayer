@@ -7,10 +7,18 @@
 [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
 [[AVAudioSession sharedInstance] setActive:YES error:nil];
 
+添加sqilte数据库：
+https://github.com/WUYUJIAN/KKMusicPlayer/blob/master/截图/1.png
+
 在info.plist中添加Required background modes
 
-https://github.com/WUYUJIAN/KKMusicPlayer/screenshot/1.png
+https://github.com/WUYUJIAN/KKMusicPlayer/blob/master/截图/2.png
 
 在info.plist中添加Privacy - Media Library Usage Description，允许app加载itnues中的音乐
 
+https://github.com/WUYUJIAN/KKMusicPlayer/blob/master/截图/3.png
 
+运行截图：
+https://github.com/WUYUJIAN/KKMusicPlayer/blob/master/截图/4.png
+https://github.com/WUYUJIAN/KKMusicPlayer/blob/master/截图/5.png
+https://github.com/WUYUJIAN/KKMusicPlayer/blob/master/截图/6.png
