@@ -21,6 +21,6 @@
 
 运行截图：
 
-![image](https://github.com/WUYUJIAN/KKMusicPlayer/blob/master/截图/4.png)
-![image](https://github.com/WUYUJIAN/KKMusicPlayer/blob/master/截图/5.png)
-![image](https://github.com/WUYUJIAN/KKMusicPlayer/blob/master/截图/6.png)
+![image](https://github.com/WUYUJIAN/KKMusicPlayer/blob/master/截图/4.PNG)
+![image](https://github.com/WUYUJIAN/KKMusicPlayer/blob/master/截图/5.PNG)
+![image](https://github.com/WUYUJIAN/KKMusicPlayer/blob/master/截图/6.PNG)
