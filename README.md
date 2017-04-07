@@ -3,4 +3,14 @@
 
 
 
+//设置后台播放
+[[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+[[AVAudioSession sharedInstance] setActive:YES error:nil];
+
+在info.plist中添加Required background modes
+
+https://github.com/WUYUJIAN/KKMusicPlayer/screenshot/1.png
+
+在info.plist中添加Privacy - Media Library Usage Description，允许app加载itnues中的音乐
+
 
