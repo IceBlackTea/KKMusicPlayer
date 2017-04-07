@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KKMusicListController">
+            <connections>
+                <outlet property="musicListTable" destination="RUL-Q7-Ydq" id="q6g-PT-zKo"/>
+                <outlet property="titleLabel" destination="qFS-bb-QSn" id="8xZ-V6-gGE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="音乐列表" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFS-bb-QSn">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="58.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RUL-Q7-Ydq">
+                    <rect key="frame" x="0.0" y="58.5" width="375" height="608.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qFS-bb-QSn" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="4e1-SI-xoa"/>
+                <constraint firstAttribute="bottom" secondItem="RUL-Q7-Ydq" secondAttribute="bottom" id="Ddh-r1-kcE"/>
+                <constraint firstItem="qFS-bb-QSn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="RzO-9d-u4K"/>
+                <constraint firstItem="RUL-Q7-Ydq" firstAttribute="leading" secondItem="qFS-bb-QSn" secondAttribute="leading" id="Ygn-86-LaA"/>
+                <constraint firstItem="RUL-Q7-Ydq" firstAttribute="top" secondItem="qFS-bb-QSn" secondAttribute="bottom" id="cUD-qk-NLc"/>
+                <constraint firstItem="RUL-Q7-Ydq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hdJ-KN-KdQ"/>
+                <constraint firstItem="qFS-bb-QSn" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1" constant="-9" id="qK7-Ev-gHK"/>
+                <constraint firstItem="RUL-Q7-Ydq" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="wjj-mf-P2p"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="81.5" y="105.5"/>
+        </view>
+    </objects>
+</document>

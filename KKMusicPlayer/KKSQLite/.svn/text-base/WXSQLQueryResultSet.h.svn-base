@@ -1,0 +1,122 @@
+//
+//  WXQueryResultSet.h
+//  WXCommonTools
+//
+//  Created by wangxutech on 17/3/16.
+//  Copyright © 2017年 fingerfinger. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "WXSQLColumnItem.h"
+#import <UIKit/UIKit.h>
+
+
+/**
+ 查询结果中的单条记录对象
+ */
+@interface WXSQLQueryResult : NSObject
+
+#pragma mark -- 添加一个列对象
+
+- (void)addColumnResult:(WXSQLColumnItem *)item;
+
+#pragma mark -- 根据列名来获取相应的列值
+
+- (NSString *)stringValueWithColumnName:(NSString *)colName;
+- (NSInteger)intValueWithColumnName:(NSString *)colName;
+- (CGFloat)floatValueWithColumnName:(NSString *)colName;
+- (NSData *)dataValueWithColumnName:(NSString *)colName;
+- (BOOL)boolValueWithColumnName:(NSString *)colName;
+
+#pragma mark -- 根据列的索引获取相应的列值
+
+- (NSString *)stringValueWithColumnIndex:(NSInteger)index;
+- (NSInteger)intValueWithColumnIndex:(NSInteger)index;
+- (CGFloat)floatValueWithColumnIndex:(NSInteger)index;
+- (NSData *)dataValueWithColumnIndex:(NSInteger)index;
+- (BOOL)boolValueWithColumnIndex:(NSInteger)index;
+
+#pragma mark -- 根据列索引来获取列名
+
+- (NSString *)columnNameAtIndex:(NSInteger)index;
+
+#pragma mark -- 根据列索引来获取列的数据类型
+
+- (SQLColumnType)columnTypeAtIndex:(NSInteger)index;
+
+#pragma mark -- 根据列名来获取列的数据类型
+
+- (SQLColumnType)columnTypeWithColumnName:(NSString *)colName;
+
+#pragma mark -- 本次查询结果中列的总数
+
+- (NSInteger)numberOfColumnInResult;
+
+#pragma mark -- 清空结果
+
+- (void)freeResult;
+
+@end
+
+
+
+
+
+
+/**
+ 查询结果的记录对象集合
+ */
+@interface WXSQLQueryResultSet : NSObject
+
+#pragma mark -- 本次查询的结果条数
+
+- (NSInteger)numberOfResultInSet;
+
+#pragma mark -- 添加一列记录
+
+- (void)addQueryResult:(WXSQLQueryResult *)result ;
+
+#pragma mark -- 记录读取的位置
+
+- (BOOL)next;
+- (void)seekToBegin;
+- (void)seekToEnd;
+- (void)seekToIndex:(NSInteger)index;
+
+#pragma mark -- 根据列名来获取相应的列值
+
+- (NSString *)stringValueWithColumnName:(NSString *)colName;
+- (NSInteger)intValueWithColumnName:(NSString *)colName;
+- (CGFloat)floatValueWithColumnName:(NSString *)colName;
+- (NSData *)dataValueWithColumnName:(NSString *)colName;
+- (BOOL)boolValueWithColumnName:(NSString *)colName;
+
+#pragma mark -- 根据列的索引获取相应的列值
+
+- (NSString *)stringValueWithColumnIndex:(NSInteger)index;
+- (NSInteger)intValueWithColumnIndex:(NSInteger)index;
+- (CGFloat)floatValueWithColumnIndex:(NSInteger)index;
+- (NSData *)dataValueWithColumnIndex:(NSInteger)index;
+- (BOOL)boolValueWithColumnIndex:(NSInteger)index;
+
+#pragma mark -- 根据列索引来获取列名
+
+- (NSString *)columnNameAtIndex:(NSInteger)index;
+
+#pragma mark -- 根据列索引来获取列的数据类型
+
+- (SQLColumnType)columnTypeAtIndex:(NSInteger)index;
+
+#pragma mark -- 根据列名来获取列的数据类型
+
+- (SQLColumnType)columnTypeWithColumnName:(NSString *)colName;
+
+#pragma mark -- 本次查询结果中列的总数
+
+- (NSInteger)numberOfColumnInResult;
+
+#pragma mark -- 清空结果集
+
+- (void)freeResultSet;
+
+@end

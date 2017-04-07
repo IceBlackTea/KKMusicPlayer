@@ -1,0 +1,250 @@
+//
+//  KKSQlite.h
+//
+//  Created by finger on 17/3/15.
+//  Copyright © 2017年 fingerfinger. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "KKSQLQueryResultSet.h"
+
+@interface KKSQLite : NSObject
+
+- (id)initDataBaseWithPath:(NSString *)dbPath;
+
+#pragma mark -- 打开数据库
+
+- (bool)openDatabase;
+
+#pragma mark -- 关闭数据库
+
+- (void)closeDataBase;
+
+#pragma mark -- 创建数据表
+
+- (bool)createTableWithName:(NSString*)tbName columns:(NSArray<KKSQLColumnItem*>*)colArray;
+
+#pragma mark -- 数据列增删改
+
+- (bool)insertTableColumn:(NSString*)tbName colName:(NSString*)colName cloType:(SQLColumnType)columnType;
+
+- (bool)deleteTableColumn:(NSString*)tbName colName:(NSString*)colName;
+
+- (bool)alterColumnType:(NSString*)tbName colName:(NSString*)colName colType:(SQLColumnType)newColType;
+
+#pragma mark -- 获取一行数据
+
+- (KKSQLQueryResultSet *)queryOneRowWithTableName:(NSString *)tbName
+                                            columnName:(NSString *)columnName
+                                           columnValue:(NSString *)columnValue;
+
+#pragma mark -- 获取表的所有数据
+
+- (KKSQLQueryResultSet *)loadAllDataWithTableName:(NSString*)tbName;
+
+#pragma mark -- 添加一列数据
+
+- (bool)addOneRowDataToTable:(NSString*)tbName data:(NSArray<KKSQLColumnItem *>*)dataArray;
+
+#pragma mark -- 更新某一条数据
+
+- (BOOL)updateRowWithTableName:(NSString *)tbName columnName:(NSString *)columnName columnValue:(NSString *)columnValue data:(NSArray<KKSQLColumnItem *>*)dataArray;
+
+#pragma mark -- 删除一行数据
+
+- (bool)deleteDataFromTable:(NSString*)tbName columnName:(NSString *)columnName columnValue:(NSString*)columnValue;
+
+#pragma mark -- 清空数据
+
+- (bool)clearTable:(NSString*)tbName;
+
+#pragma mark -- 获取表的所有列数
+
+-(int)tableCloumnCount:(NSString*)strTableName;
+
+#pragma mark -- 获取表的行数
+
+- (int)tableRowCount:(NSString*)strTableName;
+
+#pragma mark -- sql语句操作(除查询以外的所有操作)
+
+- (BOOL)executeUpdate:(NSString*)sql,...;
+
+- (BOOL)executeUpdateWithFormat:(NSString*)format, ...;
+
+- (BOOL)executeUpdate:(NSString*)sql withArgumentsInArray:(NSArray *)arguments;
+
+#pragma mark -- sql语句查询
+
+- (KKSQLQueryResultSet *)executeQuery:(NSString*)sql, ...;
+
+- (KKSQLQueryResultSet *)executeQueryWithFormat:(NSString*)format, ...;
+
+- (KKSQLQueryResultSet *)executeQuery:(NSString *)sql withArgumentsInArray:(NSArray *)arguments;
+
+@end
+
+//SQL语句操作数据库使用示例
+//@interface ViewController ()
+//{
+//}
+//
+//@property(nonatomic,weak)KKSQLite *db;
+//
+//@end
+//
+//@implementation ViewController
+//
+//- (void)viewDidLoad
+//{
+//    [super viewDidLoad];
+//    // Do any additional setup after loading the view, typically from a nib.
+//    
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsDirectory = [paths objectAtIndex:0];
+//    NSString *dbFilePath = [documentsDirectory stringByAppendingPathComponent:@"testDb.db"];
+//    
+//    KKSQLite *db = [[KKSQLite alloc]initDataBaseWithPath:dbFilePath];
+//    
+//    self.db = db ;
+//    
+//    NSString *sql = @"CREATE TABLE IF NOT EXISTS t_student (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, age integer NOT NULL);";
+//    
+//    if([db executeUpdate:sql]){
+//        NSLog(@"create data base suc!!");
+//    }
+//    
+//    [self delete];
+//    [self insert];
+//    [self query];
+//    
+//}
+//
+//- (void)didReceiveMemoryWarning
+//{
+//    [super didReceiveMemoryWarning];
+//    // Dispose of any resources that can be recreated.
+//}
+//
+////插入数据
+//-(void)insert
+//{
+//    for (int i = 0; i<10; i++){
+//        
+//        NSString *name = [NSString stringWithFormat:@"jack-%d", arc4random_uniform(100)];
+//        
+//        [self.db executeUpdate:@"INSERT INTO t_student (name, age) VALUES (?, ?);", name, @(arc4random_uniform(100))];
+//        
+//        //[self.db executeUpdate:@"INSERT INTO t_student (name, age) VALUES (?, ?);" withArgumentsInArray:@[name, @(arc4random_uniform(40))]];
+//        
+//        //[self.db executeUpdateWithFormat:@"INSERT INTO t_student (name, age) VALUES (%@, %d);", name, arc4random_uniform(40)];
+//        
+//    }
+//    
+//    NSString *sql = [NSString stringWithFormat:@"INSERT INTO t_student ('name', 'age') VALUES ('%@', '%d');",@"Jay",25];
+//    
+//    [self.db executeUpdate:sql];
+//}
+//
+////删除数据
+//-(void)delete
+//{
+//    //[self.db executeUpdate:@"DELETE FROM t_student;"];//删除表中的所有内容，不删除表
+//    [self.db executeUpdate:@"DROP TABLE IF EXISTS t_student;"];
+//    [self.db executeUpdate:@"CREATE TABLE IF NOT EXISTS t_student (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, age integer NOT NULL);"];
+//}
+//
+////查询
+//- (void)query
+//{
+//    KKSQLQueryResultSet *resultSet = [self.db executeQuery:@"select * from t_student"];
+//    
+//    NSLog(@"本次查询的记录数:%d",[resultSet numberOfResultInSet]);
+//    
+//    while ([resultSet next]) {
+//        int ID = [resultSet intValueWithColumnName:@"id"];
+//        NSString *name = [resultSet stringValueWithColumnName:@"name"];
+//        int age = [resultSet intValueWithColumnName:@"age"];
+//        NSLog(@"ID:%d ,name:%@ age:%d", ID, name, age);
+//    }
+//    
+//    NSLog(@"*******************");
+//    
+//    //    [resultSet seekToBegin];
+//    ////    [resultSet seekToIndex:0];
+//    ////    [resultSet seekToIndex:1];
+//    ////    [resultSet seekToIndex:2];
+//    ////    [resultSet seekToIndex:100];
+//    ////    [resultSet seekToIndex:5];
+//    //
+//    //    while ([resultSet next]) {
+//    //        int ID = [resultSet intValueWithColumnIndex:0];
+//    //        NSString *name = [resultSet stringValueWithColumnIndex:1];
+//    //        int age = [resultSet intValueWithColumnIndex:2];
+//    //        NSLog(@"ID:%d ,name:%@ age:%d", ID, name, age);
+//    //    }
+//    //
+//    //    [resultSet freeResultSet];
+//    //
+//    //    NSLog(@"**************************");
+//    
+//    //resultSet = [self.db executeQuery:@"select name from t_student where age > ?", @(15)];
+//    //resultSet = [self.db executeQueryWithFormat:@"select name from t_student where age > %d",15];
+//    resultSet = [self.db executeQuery:@"select name from t_student where age > ?" withArgumentsInArray:@[@(15)]];
+//    
+//    NSLog(@"本次查询的记录数:%d",[resultSet numberOfResultInSet]);
+//    
+//    while ([resultSet next]) {
+//        NSString *name = [resultSet stringValueWithColumnName:@"name"];
+//        NSLog(@"年龄大于15岁同学:name:%@", name);
+//    }
+//    
+//    [resultSet freeResultSet];
+//    
+//    NSLog(@"**************************");
+//    
+//    //resultSet = [self.db executeQuery:@"select count(*) from t_student where age > ?", @(30)];
+//    //resultSet = [self.db executeQueryWithFormat:@"select count(*) from t_student where age > %d",30];
+//    resultSet = [self.db executeQuery:@"select count(*) from t_student where age > ?" withArgumentsInArray:@[@(30)]];
+//    
+//    NSLog(@"本次查询的记录数:%d",[resultSet numberOfResultInSet]);
+//    
+//    while ([resultSet next]) {
+//        NSInteger count = [resultSet intValueWithColumnIndex:0];
+//        NSLog(@"年龄大于30岁同学人数:%d", count);
+//    }
+//    
+//    [resultSet freeResultSet];
+//    
+//    NSLog(@"**************************");
+//    
+//    //resultSet = [self.db executeQuery:@"select name,age from t_student where age > ?", @(50)];
+//    //resultSet = [self.db executeQueryWithFormat:@"select name,age from t_student where age > %d", 50];
+//    resultSet = [self.db executeQuery:@"select name,age from t_student where age > ?" withArgumentsInArray:@[@(50)]];
+//    
+//    NSLog(@"本次查询的记录数:%d",[resultSet numberOfResultInSet]);
+//    
+//    while ([resultSet next]) {
+//        NSString *name = [resultSet stringValueWithColumnName:@"name"];
+//        NSInteger count = [resultSet intValueWithColumnIndex:1];
+//        NSLog(@"年龄大于50岁同学:%@,年龄:%d",name, count);
+//    }
+//    
+//    [resultSet freeResultSet];
+//    
+//    NSLog(@"**************************");
+//    
+//    //resultSet = [self.db executeQuery:@"select name,age from t_student where age > ? and age < ?", @(30),@(50)];
+//    //resultSet = [self.db executeQueryWithFormat:@"select name,age from t_student where age > %d and age < %d", 30,50];
+//    resultSet = [self.db executeQuery:@"select name,age from t_student where age > ? and age < ?" withArgumentsInArray:@[@(30),@(50)]];
+//    
+//    NSLog(@"本次查询的记录数:%d",[resultSet numberOfResultInSet]);
+//    
+//    while ([resultSet next]) {
+//        NSString *name = [resultSet stringValueWithColumnName:@"name"];
+//        NSInteger count = [resultSet intValueWithColumnIndex:1];
+//        NSLog(@"年龄大于30岁,小于50岁的同学:%@,年龄:%d",name, count);
+//    }
+//    
+//    [resultSet freeResultSet];
+//}

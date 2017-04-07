@@ -9,10 +9,33 @@
 /* Begin PBXBuildFile section */
 		511A32621E97593800067CF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 511A32611E97593800067CF8 /* main.m */; };
 		511A32651E97593800067CF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 511A32641E97593800067CF8 /* AppDelegate.m */; };
-		511A32681E97593800067CF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511A32671E97593800067CF8 /* ViewController.m */; };
 		511A326B1E97593800067CF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511A32691E97593800067CF8 /* Main.storyboard */; };
 		511A326D1E97593800067CF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511A326C1E97593800067CF8 /* Assets.xcassets */; };
 		511A32701E97593800067CF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 511A326E1E97593800067CF8 /* LaunchScreen.storyboard */; };
+		511A328C1E975BF000067CF8 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 511A328B1E975BF000067CF8 /* UIImage+Scale.m */; };
+		511A32971E975C2400067CF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511A32901E975C2400067CF8 /* ViewController.m */; };
+		511A32981E975C2400067CF8 /* KKMusicEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 511A32931E975C2400067CF8 /* KKMusicEntity.m */; };
+		511A32991E975C2400067CF8 /* KKMusicFilesManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 511A32951E975C2400067CF8 /* KKMusicFilesManager.m */; };
+		511A32A81E97662000067CF8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 511A32A71E97662000067CF8 /* libsqlite3.tbd */; };
+		511A32B41E97683300067CF8 /* KKMusicFilesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 511A32B21E97683300067CF8 /* KKMusicFilesTableViewCell.m */; };
+		511A32B51E97683300067CF8 /* KKMusicFilesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 511A32B31E97683300067CF8 /* KKMusicFilesTableViewCell.xib */; };
+		511A32B81E97687D00067CF8 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 511A32B71E97687D00067CF8 /* UIImage+animatedGIF.m */; };
+		511A32BB1E97691700067CF8 /* music-Playing.gif in Resources */ = {isa = PBXBuildFile; fileRef = 511A32BA1E97691700067CF8 /* music-Playing.gif */; };
+		51700C041E976E5500518234 /* KKMusicPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51700C021E976E5500518234 /* KKMusicPlayController.m */; };
+		51700C051E976E5500518234 /* KKMusicPlayController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51700C031E976E5500518234 /* KKMusicPlayController.xib */; };
+		51700C0A1E976F0F00518234 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 51700C071E976F0F00518234 /* UIImage+ImageEffects.m */; };
+		51700C0B1E976F0F00518234 /* UIImageView+BlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 51700C091E976F0F00518234 /* UIImageView+BlurredImage.m */; };
+		51700C301E979BE500518234 /* KKNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51700C2F1E979BE500518234 /* KKNavViewController.m */; };
+		51700C381E979C4500518234 /* KKCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51700C331E979C4500518234 /* KKCircularProgressView.m */; };
+		51700C391E979C4500518234 /* LoadingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51700C351E979C4500518234 /* LoadingIndicatorView.m */; };
+		51700C3A1E979C4500518234 /* SyncMusicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51700C371E979C4500518234 /* SyncMusicView.m */; };
+		51700C3E1E979C6500518234 /* KKAVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 51700C3D1E979C6500518234 /* KKAVPlayer.m */; };
+		51700C4A1E97A3DF00518234 /* KKMusicListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51700C481E97A3DF00518234 /* KKMusicListController.m */; };
+		51700C4B1E97A3DF00518234 /* KKMusicListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51700C491E97A3DF00518234 /* KKMusicListController.xib */; };
+		51700C531E97AA2E00518234 /* KKSQLColumnItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 51700C4E1E97AA2E00518234 /* KKSQLColumnItem.m */; };
+		51700C541E97AA2E00518234 /* KKSQLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 51700C501E97AA2E00518234 /* KKSQLite.m */; };
+		51700C551E97AA2E00518234 /* KKSQLQueryResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 51700C521E97AA2E00518234 /* KKSQLQueryResultSet.m */; };
+		51700C5E1E97B9EA00518234 /* MusicResource in Resources */ = {isa = PBXBuildFile; fileRef = 51700C5D1E97B9EA00518234 /* MusicResource */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +43,52 @@
 		511A32611E97593800067CF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		511A32631E97593800067CF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		511A32641E97593800067CF8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		511A32661E97593800067CF8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		511A32671E97593800067CF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		511A326A1E97593800067CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		511A326C1E97593800067CF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		511A326F1E97593800067CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		511A32711E97593800067CF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		511A328A1E975BF000067CF8 /* UIImage+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
+		511A328B1E975BF000067CF8 /* UIImage+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
+		511A328F1E975C2400067CF8 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		511A32901E975C2400067CF8 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		511A32921E975C2400067CF8 /* KKMusicEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKMusicEntity.h; sourceTree = "<group>"; };
+		511A32931E975C2400067CF8 /* KKMusicEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKMusicEntity.m; sourceTree = "<group>"; };
+		511A32941E975C2400067CF8 /* KKMusicFilesManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKMusicFilesManager.h; sourceTree = "<group>"; };
+		511A32951E975C2400067CF8 /* KKMusicFilesManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKMusicFilesManager.m; sourceTree = "<group>"; };
+		511A32A71E97662000067CF8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		511A32B11E97683300067CF8 /* KKMusicFilesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKMusicFilesTableViewCell.h; sourceTree = "<group>"; };
+		511A32B21E97683300067CF8 /* KKMusicFilesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKMusicFilesTableViewCell.m; sourceTree = "<group>"; };
+		511A32B31E97683300067CF8 /* KKMusicFilesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KKMusicFilesTableViewCell.xib; sourceTree = "<group>"; };
+		511A32B61E97687D00067CF8 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		511A32B71E97687D00067CF8 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		511A32BA1E97691700067CF8 /* music-Playing.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "music-Playing.gif"; sourceTree = "<group>"; };
+		51700C011E976E5500518234 /* KKMusicPlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKMusicPlayController.h; sourceTree = "<group>"; };
+		51700C021E976E5500518234 /* KKMusicPlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKMusicPlayController.m; sourceTree = "<group>"; };
+		51700C031E976E5500518234 /* KKMusicPlayController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KKMusicPlayController.xib; sourceTree = "<group>"; };
+		51700C061E976F0F00518234 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		51700C071E976F0F00518234 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		51700C081E976F0F00518234 /* UIImageView+BlurredImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BlurredImage.h"; sourceTree = "<group>"; };
+		51700C091E976F0F00518234 /* UIImageView+BlurredImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BlurredImage.m"; sourceTree = "<group>"; };
+		51700C2E1E979BE500518234 /* KKNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKNavViewController.h; sourceTree = "<group>"; };
+		51700C2F1E979BE500518234 /* KKNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKNavViewController.m; sourceTree = "<group>"; };
+		51700C321E979C4500518234 /* KKCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKCircularProgressView.h; sourceTree = "<group>"; };
+		51700C331E979C4500518234 /* KKCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKCircularProgressView.m; sourceTree = "<group>"; };
+		51700C341E979C4500518234 /* LoadingIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingIndicatorView.h; sourceTree = "<group>"; };
+		51700C351E979C4500518234 /* LoadingIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingIndicatorView.m; sourceTree = "<group>"; };
+		51700C361E979C4500518234 /* SyncMusicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncMusicView.h; sourceTree = "<group>"; };
+		51700C371E979C4500518234 /* SyncMusicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SyncMusicView.m; sourceTree = "<group>"; };
+		51700C3C1E979C6500518234 /* KKAVPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKAVPlayer.h; sourceTree = "<group>"; };
+		51700C3D1E979C6500518234 /* KKAVPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKAVPlayer.m; sourceTree = "<group>"; };
+		51700C471E97A3DF00518234 /* KKMusicListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKMusicListController.h; sourceTree = "<group>"; };
+		51700C481E97A3DF00518234 /* KKMusicListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKMusicListController.m; sourceTree = "<group>"; };
+		51700C491E97A3DF00518234 /* KKMusicListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KKMusicListController.xib; sourceTree = "<group>"; };
+		51700C4D1E97AA2E00518234 /* KKSQLColumnItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSQLColumnItem.h; sourceTree = "<group>"; };
+		51700C4E1E97AA2E00518234 /* KKSQLColumnItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSQLColumnItem.m; sourceTree = "<group>"; };
+		51700C4F1E97AA2E00518234 /* KKSQLite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSQLite.h; sourceTree = "<group>"; };
+		51700C501E97AA2E00518234 /* KKSQLite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSQLite.m; sourceTree = "<group>"; };
+		51700C511E97AA2E00518234 /* KKSQLQueryResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSQLQueryResultSet.h; sourceTree = "<group>"; };
+		51700C521E97AA2E00518234 /* KKSQLQueryResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKSQLQueryResultSet.m; sourceTree = "<group>"; };
+		51700C5D1E97B9EA00518234 /* MusicResource */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MusicResource; path = KKMusicPlayer/MusicResource; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				511A32A81E97662000067CF8 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,8 +106,11 @@
 		511A32541E97593800067CF8 = {
 			isa = PBXGroup;
 			children = (
+				51700C5D1E97B9EA00518234 /* MusicResource */,
+				511A32B91E97691700067CF8 /* imageResource */,
 				511A325F1E97593800067CF8 /* KKMusicPlayer */,
 				511A325E1E97593800067CF8 /* Products */,
+				511A32A61E97662000067CF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +125,13 @@
 		511A325F1E97593800067CF8 /* KKMusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				51700C4C1E97AA2E00518234 /* KKSQLite */,
+				51700C311E979C1300518234 /* CustomView */,
+				51700C2D1E979BE500518234 /* KKNavViewController */,
+				511A328D1E975C2400067CF8 /* KKMusicPlayer */,
+				511A32891E975BF000067CF8 /* Category */,
 				511A32631E97593800067CF8 /* AppDelegate.h */,
 				511A32641E97593800067CF8 /* AppDelegate.m */,
-				511A32661E97593800067CF8 /* ViewController.h */,
-				511A32671E97593800067CF8 /* ViewController.m */,
 				511A32691E97593800067CF8 /* Main.storyboard */,
 				511A326C1E97593800067CF8 /* Assets.xcassets */,
 				511A326E1E97593800067CF8 /* LaunchScreen.storyboard */,
@@ -77,6 +147,129 @@
 				511A32611E97593800067CF8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		511A32891E975BF000067CF8 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				51700C061E976F0F00518234 /* UIImage+ImageEffects.h */,
+				51700C071E976F0F00518234 /* UIImage+ImageEffects.m */,
+				51700C081E976F0F00518234 /* UIImageView+BlurredImage.h */,
+				51700C091E976F0F00518234 /* UIImageView+BlurredImage.m */,
+				511A32B61E97687D00067CF8 /* UIImage+animatedGIF.h */,
+				511A32B71E97687D00067CF8 /* UIImage+animatedGIF.m */,
+				511A328A1E975BF000067CF8 /* UIImage+Scale.h */,
+				511A328B1E975BF000067CF8 /* UIImage+Scale.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		511A328D1E975C2400067CF8 /* KKMusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				51700C3B1E979C6500518234 /* KKAVplayer */,
+				511A328E1E975C2400067CF8 /* Controller */,
+				511A32911E975C2400067CF8 /* Modal */,
+				511A32961E975C2400067CF8 /* View */,
+			);
+			path = KKMusicPlayer;
+			sourceTree = "<group>";
+		};
+		511A328E1E975C2400067CF8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				51700C471E97A3DF00518234 /* KKMusicListController.h */,
+				51700C481E97A3DF00518234 /* KKMusicListController.m */,
+				51700C491E97A3DF00518234 /* KKMusicListController.xib */,
+				51700C011E976E5500518234 /* KKMusicPlayController.h */,
+				51700C021E976E5500518234 /* KKMusicPlayController.m */,
+				51700C031E976E5500518234 /* KKMusicPlayController.xib */,
+				511A328F1E975C2400067CF8 /* ViewController.h */,
+				511A32901E975C2400067CF8 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		511A32911E975C2400067CF8 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				511A32921E975C2400067CF8 /* KKMusicEntity.h */,
+				511A32931E975C2400067CF8 /* KKMusicEntity.m */,
+				511A32941E975C2400067CF8 /* KKMusicFilesManager.h */,
+				511A32951E975C2400067CF8 /* KKMusicFilesManager.m */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		511A32961E975C2400067CF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				511A32B11E97683300067CF8 /* KKMusicFilesTableViewCell.h */,
+				511A32B21E97683300067CF8 /* KKMusicFilesTableViewCell.m */,
+				511A32B31E97683300067CF8 /* KKMusicFilesTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		511A32A61E97662000067CF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				511A32A71E97662000067CF8 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		511A32B91E97691700067CF8 /* imageResource */ = {
+			isa = PBXGroup;
+			children = (
+				511A32BA1E97691700067CF8 /* music-Playing.gif */,
+			);
+			name = imageResource;
+			path = KKMusicPlayer/imageResource;
+			sourceTree = "<group>";
+		};
+		51700C2D1E979BE500518234 /* KKNavViewController */ = {
+			isa = PBXGroup;
+			children = (
+				51700C2E1E979BE500518234 /* KKNavViewController.h */,
+				51700C2F1E979BE500518234 /* KKNavViewController.m */,
+			);
+			path = KKNavViewController;
+			sourceTree = "<group>";
+		};
+		51700C311E979C1300518234 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				51700C321E979C4500518234 /* KKCircularProgressView.h */,
+				51700C331E979C4500518234 /* KKCircularProgressView.m */,
+				51700C341E979C4500518234 /* LoadingIndicatorView.h */,
+				51700C351E979C4500518234 /* LoadingIndicatorView.m */,
+				51700C361E979C4500518234 /* SyncMusicView.h */,
+				51700C371E979C4500518234 /* SyncMusicView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		51700C3B1E979C6500518234 /* KKAVplayer */ = {
+			isa = PBXGroup;
+			children = (
+				51700C3C1E979C6500518234 /* KKAVPlayer.h */,
+				51700C3D1E979C6500518234 /* KKAVPlayer.m */,
+			);
+			path = KKAVplayer;
+			sourceTree = "<group>";
+		};
+		51700C4C1E97AA2E00518234 /* KKSQLite */ = {
+			isa = PBXGroup;
+			children = (
+				51700C4D1E97AA2E00518234 /* KKSQLColumnItem.h */,
+				51700C4E1E97AA2E00518234 /* KKSQLColumnItem.m */,
+				51700C4F1E97AA2E00518234 /* KKSQLite.h */,
+				51700C501E97AA2E00518234 /* KKSQLite.m */,
+				51700C511E97AA2E00518234 /* KKSQLQueryResultSet.h */,
+				51700C521E97AA2E00518234 /* KKSQLQueryResultSet.m */,
+			);
+			path = KKSQLite;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +303,7 @@
 				TargetAttributes = {
 					511A325C1E97593800067CF8 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 8X732W9RQ2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -138,7 +332,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				511A32701E97593800067CF8 /* LaunchScreen.storyboard in Resources */,
+				51700C4B1E97A3DF00518234 /* KKMusicListController.xib in Resources */,
+				51700C051E976E5500518234 /* KKMusicPlayController.xib in Resources */,
+				511A32BB1E97691700067CF8 /* music-Playing.gif in Resources */,
 				511A326D1E97593800067CF8 /* Assets.xcassets in Resources */,
+				511A32B51E97683300067CF8 /* KKMusicFilesTableViewCell.xib in Resources */,
+				51700C5E1E97B9EA00518234 /* MusicResource in Resources */,
 				511A326B1E97593800067CF8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,9 +349,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				511A32681E97593800067CF8 /* ViewController.m in Sources */,
+				51700C301E979BE500518234 /* KKNavViewController.m in Sources */,
+				51700C041E976E5500518234 /* KKMusicPlayController.m in Sources */,
+				511A32981E975C2400067CF8 /* KKMusicEntity.m in Sources */,
+				51700C0A1E976F0F00518234 /* UIImage+ImageEffects.m in Sources */,
+				51700C381E979C4500518234 /* KKCircularProgressView.m in Sources */,
+				511A32B81E97687D00067CF8 /* UIImage+animatedGIF.m in Sources */,
 				511A32651E97593800067CF8 /* AppDelegate.m in Sources */,
+				51700C391E979C4500518234 /* LoadingIndicatorView.m in Sources */,
+				511A32B41E97683300067CF8 /* KKMusicFilesTableViewCell.m in Sources */,
+				51700C4A1E97A3DF00518234 /* KKMusicListController.m in Sources */,
+				51700C551E97AA2E00518234 /* KKSQLQueryResultSet.m in Sources */,
+				511A328C1E975BF000067CF8 /* UIImage+Scale.m in Sources */,
+				511A32971E975C2400067CF8 /* ViewController.m in Sources */,
+				51700C531E97AA2E00518234 /* KKSQLColumnItem.m in Sources */,
+				51700C3E1E979C6500518234 /* KKAVPlayer.m in Sources */,
+				51700C0B1E976F0F00518234 /* UIImageView+BlurredImage.m in Sources */,
 				511A32621E97593800067CF8 /* main.m in Sources */,
+				51700C541E97AA2E00518234 /* KKSQLite.m in Sources */,
+				51700C3A1E979C4500518234 /* SyncMusicView.m in Sources */,
+				511A32991E975C2400067CF8 /* KKMusicFilesManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,10 +490,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8X732W9RQ2;
 				INFOPLIST_FILE = KKMusicPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KKMusicPlayer.KKMusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -285,10 +505,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 8X732W9RQ2;
 				INFOPLIST_FILE = KKMusicPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KKMusicPlayer.KKMusicPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -311,6 +535,7 @@
 				511A32761E97593800067CF8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

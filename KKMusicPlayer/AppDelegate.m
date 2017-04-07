@@ -47,5 +47,11 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#pragma mark -- 设置第一响应者，如果不设置，则接受不到耳机线控和音乐控制台的消息
+
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
 
 @end
