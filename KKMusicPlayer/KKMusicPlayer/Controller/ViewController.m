@@ -14,6 +14,7 @@
 #import "KKMusicFilesManager.h"
 #import "KKMusicFilesTableViewCell.h"
 #import "KKNavViewController.h"
+#import "MJRefresh.h"
 
 static NSString *reuseIdentifier = @"reuseIdentifier";
 
@@ -35,6 +36,10 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     
     NSMutableArray *playHistoryIndexs;
 }
+
+//下拉刷新
+@property (nonatomic, weak) MJRefreshNormalHeader *headerRefresh;
+
 @end
 
 @implementation ViewController
@@ -69,6 +74,7 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     _playMode = KKPlayModeRandomPlay ;
     playHistoryIndexs = [[NSMutableArray alloc]init];
     
+    [self initRefreshControl];
     [self loadMusicData];
 }
 
@@ -82,6 +88,25 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
     [super viewWillAppear:animated];
     
     [self refreshPlayInfo];
+}
+
+#pragma mark -- 页面下拉刷新
+
+- (void)initRefreshControl
+{
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadMusicData)];
+    header.lastUpdatedTimeLabel.hidden = YES;
+    
+    header.stateLabel.hidden = YES;
+    
+    mediaTable.mj_header = header;
+    
+    self.headerRefresh = header;
+}
+
+- (void)endRefresh
+{
+    [mediaTable.mj_header endRefreshing];
 }
 
 #pragma mark -- 数据加载
@@ -137,6 +162,7 @@ static NSString *reuseIdentifier = @"reuseIdentifier";
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self refreshView];
+            [self endRefresh];
             [self hideIndicatorView];
         });
     });
